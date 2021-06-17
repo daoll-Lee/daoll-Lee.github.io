@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 목록을 가진 텍스트 입력</title>
+</head>
+<body>
+<h3>가보고 싶은곳</h3>
+<hr>
+<table>
+<form>  
+    <tr><td>나라: <input type="text" list="countries">
+    <datalist id="countries">
+        <option value="가나">
+            <option value="스위스">
+                <option value="브라질">
+                </option>
+            </option>
+        </option>
+    </datalist></td></tr>
+    <tr><td>가보고 싶은곳: <input type="text" list="what"><br>
+<datalist id="what">
+    <option value="산">
+        <option value="바다">
+            <option value="도시">
+            </option>
+        </option>
+    </option>
+</datalist></td></tr>
+   </form> 
+   </table>
+<h3>버튼이 있는 입력 폼</h3>
+<hr>
+<tr><td>검색: <input type="text" size="10" value="">
+   <input type="button" value="Q1">
+   <button type="button">Q2</button><br></td></tr>
+   <tr><td>submit 버튼: <input type="submit" value="전송1">
+<button type="submit">전송2</button><br></td></tr>
+<tr><td>reset 버튼: <input type="reset" value="리셋1"></td></tr>
+<button type="reset">리셋2</button><br>
+이미지 버튼: <input type="image" src="media/button.jpg" width="20" height="20"    alt="이미지 버튼">
+<button type="button">
+    <img src="media/button.jpg" width="20" height="20"  alt="이미지 버튼">
+</button>
+<h3>먹고 싶은거 전부 체크하세요</h3>
+<hr>
+<form>
+    짜장면 <input type="checkbox" value="1">
+    짬뽕 <input type="checkbox" value="2" checked>
+    탕수육 <input type="checkbox" value="3">
+</form>
+<h3>먹고 싶은거 하나만 골라봐</h3>
+<hr>
+<td><tr>
+<form>
+    <label>
+    <input type="radio" name="china" value="1">
+    짜장면<img src="media/jajang.jpg" width="100" height="100"><br>
+    </label><br>
+    <label>
+    <input type="radio" name="china" value="2" checked>
+    짬뽕<img src="media/jjam.jpg" width="100" height="100"><br>
+    </label><br>
+    <label>
+    <input type="radio" name="china" value="3">
+    탕수육<img src="media/Tangsuyuk.jpg" width="100" height="100">
+    </label><br>
+</form></tr></td>
+<h3>콤보박스(먹고 싶은 음식은?)</h3>
+<hr>
+<table>
+    <td><tr>
+    <form>
+    <select name="china">
+        <tr><td><option value="1">짜장면</option></td></tr>
+        <tr><td><option value="2" selected>짬뽕</option></td></tr>
+        <tr><td><option value="3">탕수육</option></td></tr>
+    </select>
+</form></tr></td>
+</table>
+<h3>로그인 폼</h3>
+<hr>
+<table>
+<form name="fo" method="get">
+    <tr><td><label>사용자 ID : <input type="text" size="15" value=""></td></tr>
+    </label><br>
+    <tr><td><label for="pass">비밀번호 : </label></td></tr>
+    <input id="pass" type="password" size="15" value="">
+    <input type="submit" value="완료">
+</form>
+</table>
+<h3>컬러 다이얼로그로 색 입력</h3>
+<hr>
+<form>
+    색 선택
+    <input type="color" value="#00BFFF"
+    onchange="document.body.style.color=this.value">
+</form>
+<h3>시간 정보 입력 HTMl5 폼 요소들</h3>
+초기 세팅 : 2016년 9월 1일 밤 9시 30분(10초 21)<br>
+시간을 변경해 보세요
+<hr>
+<table>
+<form>
+    <pre>
+        <tr><td>month : <input type="month" value="2016-09"></td></tr>
+        <tr><td>week : <input type="week" value="2016-W36"></td></tr>
+        <tr><td>data : <input type="date" value="2016-09-01"></td></tr>
+        <tr><td>time : <input type="time" value="21:30"></td></tr>
+        <tr><td>local : <input type="datetime-local"
+        value="2016-09-01T21:30:10:32"></td></tr>
+        <tr><td>number : <input type="number"></td></tr>
+        <tr><td> time : <input type="range"></td></tr>
+    </pre>
+</form>
+</table>
+<h3>생일 축하합니다.</h3>
+<hr>
+당신의 생일은 2002년 9월 28일입니다. 틀리면 수정하시고 
+파티 시간과 장소를 입력하세요.
+<form>
+    <table>
+        <tr><td>생일</td>
+        <td><input type="date" value="2002-09-28"></td></tr>
+        <tr><td>생일 파티 시간</td>
+        <td><input type="time" value="13-30"></td></tr>
+        <tr><td>생일 파티 장소</td>
+        <td><input type="text"></td></tr>
+    </table>
+</form>
+<h3>온도</h3>
+<table>
+<form>
+    <tr><td>지속시간 (0.0~10.0시간) :
+    <input type="number" min="0.0" max="10.0"
+        step="0.5"></td></tr>
+        <tr><td>온도 설정 : 10&deg;
+        <input type="range" min="10" max="30"
+        list="temperatures">30&deg;</td></tr>
+        <datalist id="temperatures">
+            <option value="12" label="low">
+                <option value="20" label="Medium">
+                    <option value="28" label="High">
+
+                    </option>
+                </option>
+            </option>
+        </datalist>
+</form>
+</table>
+</body>
+</html>
